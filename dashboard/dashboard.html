@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Recent Tweets</h2>
+<ul>
+    {% for tweet in tweets %}
+        <li>{{ tweet.text }}</li>
+    {% endfor %}
+</ul>
+<form method="post">{% csrf_token %}<input name="content"><button type="submit">Post Tweet</button></form>
+{% endblock %}

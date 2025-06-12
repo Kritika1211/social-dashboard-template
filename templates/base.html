@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Social Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <nav>Welcome {{ user.username }} | <a href="/logout">Logout</a></nav>
+    {% block content %}{% endblock %}
+</body>
+</html>
